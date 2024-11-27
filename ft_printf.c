@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:46:07 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/26 23:58:46 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:37:47 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,23 @@ int	ft_printf(const char *s, ...)
 	count = 0;
 	if (write(1, NULL, 0) == -1)
 		return (-1);
-	va_start (ap, s);
+	va_start(ap, s);
 	while (*s != '\0')
 	{
 		if (*s == '%')
-			count += print_format(*(++s), ap);
+		{
+			s++;
+			if (*s == '%')
+				count += write(1, "%", 1);
+			else if (*s == '\0')
+				break ;
+			else
+				count += print_format(*s, ap);
+		}
 		else
-			count += write (1, s, 1);
+			count += write(1, s, 1);
 		s++;
 	}
-	va_end (ap);
+	va_end(ap);
 	return (count);
 }
