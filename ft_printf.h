@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 00:23:10 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/27 14:47:48 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/27 19:20:56 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_printf(const char *s, ...);
 int		ft_putchar(char c);
