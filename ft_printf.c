@@ -6,7 +6,7 @@
 /*   By: abouabba <abouabba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:46:07 by abouabba          #+#    #+#             */
-/*   Updated: 2024/11/27 21:37:56 by abouabba         ###   ########.fr       */
+/*   Updated: 2024/11/29 11:12:08 by abouabba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ int	ft_printf(const char *s, ...)
 	int			count;
 
 	count = 0;
-	if (write(1, NULL, 0) == -1)
-		return (-1);
 	va_start(ap, s);
 	while (*s != '\0')
 	{
