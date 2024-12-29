@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned int nb)
+int	ft_puthex(unsigned int nb)  
 {
 	int		count;
 	char	*x;
