@@ -21,6 +21,6 @@ int	ft_puthex(unsigned int nb)
 	x = "0123456789abcdef";
 	if (nb >= 16)
 		count += ft_puthex(nb / 16);
-	count += ft_putchar(x[nb % 16]);
+	count += ft_putchar(x[nb % 16]); 
 	return (count);
 }
