@@ -16,7 +16,7 @@ int	print_format(char specifier, va_list ap)
 {
 	unsigned long	p;
 	int				count;
-
+ 
 	count = 0;
 	if (specifier == 'c')
 		count += ft_putchar ((char)va_arg(ap, int));
