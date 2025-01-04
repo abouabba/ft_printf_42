@@ -15,7 +15,7 @@
 int	ft_putstr(char *s)
 {
 	int	i;
-	int	count;
+	int	count:
 
 	i = 0;
 	count = 0;
