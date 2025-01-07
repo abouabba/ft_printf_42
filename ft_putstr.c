@@ -26,5 +26,5 @@ int	ft_putstr(char *s)
 		count += write (1, &s[i], 1);
 		i++;
 	}
-	return (i);   
+	return (i);
 }
